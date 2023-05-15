@@ -23,11 +23,10 @@ connection
         console.log(error)
     })
 
+app.get('/', (req, res) => {
+    res.render('index', { valor: '123456' });
+  });
 
-app.get('/', (req,res) => {
-    // res.send('Bem vindo')
-    res.render('index')
-})
 
 app.listen(8000, () => {
     console.log('Servidor Rodando na Porta 8000')
